@@ -1,0 +1,5 @@
+﻿
+
+This component provides some services for the communication. The idea behind that is, that the Agents iteself do not need to 
+own implementation about the communication.
+The benefit is that the Agents could send their data with every supported service (in our case MSMQ and TCP Service)

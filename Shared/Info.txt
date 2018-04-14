@@ -1,0 +1,4 @@
+﻿
+
+
+The shared Projects provides classes, interfaces,... which are used by more than one project of the soulution.

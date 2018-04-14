@@ -1,0 +1,4 @@
+﻿
+
+This component provides the logic to communicate with the message queue, nothing else. 
+This is quite similar to the CoreService Component but for MSMQ stuff and not for TCP/Web Services

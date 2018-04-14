@@ -1,0 +1,4 @@
+﻿
+
+
+This agent is a very simple one, you can enter some data and by pressin send the data is sent to the Adapter.

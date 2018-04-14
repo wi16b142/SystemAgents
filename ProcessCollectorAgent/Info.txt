@@ -1,0 +1,5 @@
+﻿
+
+This Agent collects information of running processes and sends that data to the adaptor.
+the adaptor receives only a short notification, not the full list, because that would decrease readability on the adaptor output.
+

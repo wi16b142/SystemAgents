@@ -1,0 +1,6 @@
+﻿
+
+
+
+
+The Core Services are just providing the necessary code for publishing a service, not more ... thats already a component

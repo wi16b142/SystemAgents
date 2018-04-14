@@ -1,0 +1,19 @@
+﻿<Window x:Class="DummyGuiAgent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Message Injection" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Data to send" VerticalAlignment="Center" Margin="5,7"/>
+        <TextBox Grid.Column="1" Height="25" Width="250" Text="{Binding MessageToSend, Mode=TwoWay}" HorizontalAlignment="Left" Margin="5,0"/>
+        <Button Content="Sumit" Height="25" Width="70" Grid.Column="2" Click="SendMessage_Clicked"/>
+    </Grid>
+</Window>

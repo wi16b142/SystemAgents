@@ -1,0 +1,6 @@
+﻿
+
+
+
+
+This component contains the logic to visualize the data, not more.

@@ -1,0 +1,6 @@
+﻿
+
+
+
+This Component contains only the logic and has connections to the Output and the Service.
+The logic covered by this component is very simple, or still not available because it is just routing the data to the output

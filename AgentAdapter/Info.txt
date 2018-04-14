@@ -1,0 +1,13 @@
+
+
+
+
+The Adapter is providing several communication channels to the Agents. The base sample supports these channels:
+- TCP Service
+- HTTP Service (Web Service)
+- Microsoft Message Queue (MSMQ)
+
+If an Agent is sending data to one of these channels, the Adapter is forwarding this message to the Core Component by using a TCP service.
+As you can see the logic of the Adapter is very simple.
+
+			!!!!!To run the projects you have to start VS as Admin, otherwise communication would not work without further steps!!!!!
