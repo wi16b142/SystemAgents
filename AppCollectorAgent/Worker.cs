@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Management;
-using System.Timers;
-using Shared;
+﻿using Shared;
 using Shared.Delegates;
 using Shared.Interfaces;
+using System;
+using System.Management;
+using System.Timers;
 
 namespace AppCollectorAgent
 {

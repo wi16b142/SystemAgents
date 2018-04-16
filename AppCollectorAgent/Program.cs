@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AgentComServices;
+﻿using AgentComServices;
 using Shared.Delegates;
+using System;
 
 namespace AppCollectorAgent
 {
@@ -13,6 +9,7 @@ namespace AppCollectorAgent
         StringMessageInformer informer;
         Worker worker;
 
+        //[STAThread]
         static void Main(string[] args)
         {
             Program prog = new Program();
@@ -20,7 +17,8 @@ namespace AppCollectorAgent
 
             Console.WriteLine("Press Enter to stop the Worker!");
             Console.ReadLine();
-            prog.worker.StopCollectingAppInfo();
+            //prog.worker.StopCollectingAppInfo();
+            prog.Stop();
         }
 
         public Program()
@@ -37,7 +35,7 @@ namespace AppCollectorAgent
         /// </summary>
         void Stop()
         {
-            worker.StartCollectingAppInfo();
+            worker.StopCollectingAppInfo();
         }
 
         /// <summary>
@@ -51,6 +49,7 @@ namespace AppCollectorAgent
 
             Console.WriteLine(worker.Applist.ToString() + " is too long to be displayed.");
 
+            //Doesn't work for some reason
             /*
             foreach (var item in worker.Applist)
             {
