@@ -28,6 +28,14 @@ namespace GUI.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private ObservableCollection<AgentVM> agents;
+        private ObservableCollection<string> messages;
+
+        public ObservableCollection<string> Messages
+        {
+            get { return messages; }
+            set { messages = value; RaisePropertyChanged(); }
+        }
+
 
         public ObservableCollection<AgentVM> Agents
         {
@@ -46,21 +54,15 @@ namespace GUI.ViewModel
             else
             {
                 LogicHandler lh = new LogicHandler(new MessageInformer(NewMessageReceived));
-
-                while (true)
-                {
-                    Thread.Sleep(100);
-                }
+                Messages = new ObservableCollection<string>();
             }
         }
 
         private void NewMessageReceived(CoreMessage message)
         {
-            App.Current.Dispatcher.Invoke(() =>
-            {
-                //Console.WriteLine(String.Format("Received message from \"{0}\" at \"{1}\"\r\n\t{2}", message.Source, message.Date.ToShortTimeString(), message.Data));
+            App.Current.Dispatcher.Invoke(()=> {
+                Messages.Add(String.Format("Received message from \"{0}\" at \"{1}\"\r\n\t{2}", message.Source, message.Date.ToShortTimeString(), message.Data)); 
             });
-            
         }
 
     }
